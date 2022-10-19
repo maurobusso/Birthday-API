@@ -9,7 +9,7 @@ app.use(cors())
 const people = {
     'luca':{
         'birthday': '12/october',
-        'age': 30 
+        'age': 30
     },  
     'marco':{
         'birthday': '12/february',
