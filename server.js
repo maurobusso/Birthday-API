@@ -25,16 +25,14 @@ const people = {
 }
 
 app.get('/', (request, response) => {
-    response.sendFile(__dirname + '/style.css') 
-    response.sendFile(__dirname + '/index.html') 
-       
+    response.sendFile(__dirname + '/index.html')   
 })
 
 app.get('/api/:name', (req, res) => {
     const peopleName = req.params.name.toLowerCase()
     
     if(people[peopleName]){
-        res.json(people[peopleName])
+        res.json(people[peopleName].birthday)
 
     }else{
         res.json(people['not found'])
