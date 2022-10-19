@@ -15,9 +15,13 @@ const people = {
         'birthday': '12/february',
         'age': 32
     },  
-    'mamma':{
+    'stefano':{
         'birthday': '12/october',
         'age': 56  
+    },
+    'simone':{
+        'birthday': '12/october' ,
+        'age': 32
     },
     'not found':{
         'birthday': 'not found'
