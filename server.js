@@ -32,7 +32,7 @@ app.get('/api/:name', (req, res) => {
     const peopleName = req.params.name.toLowerCase()
     
     if(people[peopleName]){
-        res.json(people[peopleName].birthday)
+        res.json(people[peopleName])
 
     }else{
         res.json(people['not found'])
