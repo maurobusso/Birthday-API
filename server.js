@@ -22,8 +22,8 @@ const people = {
         'birthday': '12/october' ,
         'age': 32
     },
-    'not found':{
-        'birthday': 'not found',
+    'unkown':{
+        'birthday': 'unkown',
     }  
 }
 
@@ -38,13 +38,11 @@ app.get('/', (request, response) => {
 //the bug is here probs
 
 app.get('/:name', (request, response) => {
-    const friendName = request.params.name.toLowerCase()  //this line grabs the query parameter after /api:
-    
+    const friendName = request.params.name.toLowerCase()      
     if(people[friendName]){
         response.json(people[friendName])
-
     }else{
-        response.json(people['not found'])
+        response.json(people['unknown'])
     }
 })
 
