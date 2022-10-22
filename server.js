@@ -1,4 +1,3 @@
-const { response } = require('express')
 const express = require('express')
 const app = express()
 const cors = require('cors')  
@@ -24,22 +23,28 @@ const people = {
         'age': 32
     },
     'not found':{
-        'birthday': 'not found'
+        'birthday': 'not found',
     }  
 }
 
 app.get('/', (request, response) => {
-    response.sendFile(__dirname + '/index.html')   
+    response.sendFile(__dirname + '/index.html')  
 })
 
-app.get('/api/:name', (req, res) => {
-    const peopleName = req.params.name.toLowerCase()
+// app.get('/api', (request, response) => {
+//     response.json(people)  
+// })
+
+//the bug is here probs
+
+app.get('/:name', (request, response) => {
+    const friendName = request.params.name.toLowerCase()  //this line grabs the query parameter after /api:
     
-    if(people[peopleName]){
-        res.json(people[peopleName])
+    if(people[friendName]){
+        response.json(people[friendName])
 
     }else{
-        res.json(people['not found'])
+        response.json(people['not found'])
     }
 })
 

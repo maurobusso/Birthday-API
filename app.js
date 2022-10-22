@@ -2,13 +2,13 @@
 document.querySelector('button').addEventListener('click', apiRequest)
 
 async function apiRequest(){
-     const people = document.querySelector('input').value 
+     const name = document.querySelector('input').value 
      try{
-         const response = await fetch(`https://birthday-api.onrender.com/api/${people}`) 
+         const response = await fetch(`https://birthday-api.onrender.com/${name}`) 
          const data = await response.json()
 
          console.log(data)
-         document.querySelector('h2').innerText = data 
+         document.querySelector('h2').innerText = data.birthday
      }catch(error){
          console.log(error)
      }
