@@ -8,7 +8,7 @@ async function apiRequest(){
          const data = await response.json(apiData)
 
          console.log(data)
-         document.querySelector('h2').innerText = data.birthName
+         document.querySelector('h2').innerText = data.birthday
      }catch(error){
          console.log(error)
      }
