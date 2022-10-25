@@ -37,7 +37,7 @@ app.get('/', (request, response) => {
 
 //the bug is here probs
 
-app.get('/api/:name', (request, response) => {
+app.get('/:name', (request, response) => {
     const friendName = request.params.name.toLowerCase()  
     //console.log(request.params.name) 
     if(people[friendName]){
