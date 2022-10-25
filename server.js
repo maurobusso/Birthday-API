@@ -38,7 +38,8 @@ app.get('/', (request, response) => {
 //the bug is here probs
 
 app.get('/:name', (request, response) => {
-    const friendName = request.params.name.toLowerCase()      
+    const friendName = request.params.name.toLowerCase()  
+    //console.log(request.params.name) 
     if(people[friendName]){
         response.json(people[friendName])
     }else{
@@ -47,7 +48,7 @@ app.get('/:name', (request, response) => {
 })
 
 app.listen(process.env.PORT || PORT, () => {
-    console.log(`The server is running on ${PORT}!`)
+    console.log(`The server is running on ${PORT}! you better catch it`)
 })
 
 

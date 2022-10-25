@@ -1,10 +1,11 @@
-
 document.querySelector('button').addEventListener('click', apiRequest)
 
+alert('workinfg')
+
 async function apiRequest(){
-     const name = document.querySelector('input').value 
+     const friendName = document.querySelector('input').value 
      try{
-         const response = await fetch(`https://birthday-api.onrender.com/${name}`) 
+         const response = await fetch(`https://birthday-api.onrender.com/${friendName}`) 
          const data = await response.json()
 
          console.log(data)
