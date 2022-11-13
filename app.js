@@ -1,5 +1,7 @@
 document.querySelector('button').addEventListener('click', apiRequest)
 
+
+
 async function apiRequest(){
      const friendName = document.getElementById('myInput').value 
      try{
@@ -8,7 +10,7 @@ async function apiRequest(){
          const data = await response.json()
 
          console.log(data)
-         document.querySelector('h2').innerText = data.birthday
+         document.querySelector('.container').innerText = data
      }catch(error){
          console.log(error)
      }
