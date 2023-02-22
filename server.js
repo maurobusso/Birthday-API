@@ -7,20 +7,20 @@ app.use(cors())
 
 const people = {
     'luca':{
-        'birthday': 'tomorrow',
-        'age': 10
+        'birthday': '10 october',
+        'age': 30
     },  
     'marco':{
         'birthday': '3 feb',
-        'age': 10
+        'age': 32
     },  
     'stefano':{
-        'birthday': 'something',
-        'age': 10  
+        'birthday': '11 march',
+        'age': 33  
     },
     'simone':{
-        'birthday': 'something' ,
-        'age': 10
+        'birthday': 'dont remeber' ,
+        'age': 33
     },
     'unkown':{
         'birthday': 'unkown',
