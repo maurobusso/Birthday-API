@@ -7,11 +7,11 @@ app.use(cors())
 
 const people = {
     'luca':{
-        'birthday': 'something',
+        'birthday': 'tomorrow',
         'age': 10
     },  
     'marco':{
-        'birthday': 'something',
+        'birthday': '3 feb',
         'age': 10
     },  
     'stefano':{
@@ -32,8 +32,9 @@ app.get('/', (request, response) => {
 })
 
 
-app.get('/:name', (request, response) => {
-    const friendName = request.params.name.toLowerCase()  
+app.get('/api/:name', (request, response) => {
+    const friendName = request.params.name 
+
     if(people[friendName]){
         response.json(people[friendName])
     }else{
@@ -44,5 +45,4 @@ app.get('/:name', (request, response) => {
 app.listen(process.env.PORT || PORT, () => {
     console.log(`The server is running on ${PORT}! you better catch it`)
 })
-
 
