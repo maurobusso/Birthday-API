@@ -8,7 +8,7 @@ async function apiRequest(){
     console.log('click')
     const friendName = friend.value 
     try{
-        const response = await fetch(`https://funny-muffin-ce082f.netlify.app/api/${friendName}`) 
+        const response = await fetch(`https://birthday-api.onrender.com/api/${friendName}`) 
         const data = await response.json()
         
         container.innerText = data.birthday
