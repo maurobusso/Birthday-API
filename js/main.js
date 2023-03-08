@@ -17,5 +17,5 @@ async function apiRequest(){
     }
 }
 
-// `https://funny-muffin-ce082f.netlify.app/${friendName}`
+//`https://funny-muffin-ce082f.netlify.app/${friendName}`
 //`https://birthday-api.onrender.com/api/${friendName}`
