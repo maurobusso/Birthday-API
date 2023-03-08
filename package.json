@@ -4,8 +4,6 @@
   "description": "simple api",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "build": "yarn",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "me",
