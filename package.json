@@ -2,7 +2,7 @@
   "name": "birthday-api",
   "version": "1.0.0",
   "description": "simple api",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "start": "server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
