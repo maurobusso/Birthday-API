@@ -4,7 +4,6 @@
   "description": "simple api",
   "main": "server.js",
   "scripts": {
-    "build": "npm install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "me",
